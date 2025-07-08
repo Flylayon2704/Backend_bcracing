@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 
 export class AuthService {
     static async Register(userData) {
-        const { name, email, password } = userData;
+        const { email, password } = userData;
 
         const existingUser = await userSchema.findOne({ email });
         if (existingUser) throw new Error('El usuario ya existe');
