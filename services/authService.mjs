@@ -33,7 +33,7 @@ export class AuthService {
     static generateToken(user) {
         return jwt.sign(
             { id: user._id, email: user.email },
-            config.JWT_SECRET,
+            'your_jwt_secret_key',
             { expiresIn: '1h' }
         )
     }
