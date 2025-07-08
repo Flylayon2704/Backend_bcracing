@@ -33,7 +33,7 @@ export class AuthService {
     static generateToken(user) {
         return jwt.sign(
             { id: user._id, email: user.email },
-            'your_jwt_secret_key',
+            'helgue_isaac',
             { expiresIn: '1h' }
         )
     }
