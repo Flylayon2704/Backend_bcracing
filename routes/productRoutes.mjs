@@ -8,5 +8,6 @@ productRoutes.get("/", ProductController.getAllProducts);
 productRoutes.get("/:id", ProductController.getProductById);
 productRoutes.put("/:id", ProductController.updateProduct);
 productRoutes.delete("/:id", ProductController.deleteProduct);
+productRoutes.get("/search/:name", ProductController.getProductsByName);
 
 export default productRoutes;

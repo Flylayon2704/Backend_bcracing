@@ -16,6 +16,11 @@ export class ProductService {
                         .limit(100);
     }
 
+    static async getProductsByName(name){
+        const products = await productSchema.find({ nombre: new RegExp(name, 'i') });
+        return products;
+    }
+
     static async getProductById(id) {
         const product = await productSchema.findById(id);
         if (!product) throw new Error('Producto no encontrado');
